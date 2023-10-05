@@ -1,29 +1,29 @@
-import {Card, CardBody, CardFooter, CardHeader} from "@nextui-org/card";
-import {Chip, Image} from "@nextui-org/react";
-import {Search, ShoppingBag, Star} from "react-feather";
-import {Button} from "@nextui-org/button";
-import {Link} from "@nextui-org/link";
-import {Skeleton} from "@nextui-org/skeleton";
+import {Card, CardBody, CardFooter, CardHeader} from '@nextui-org/card';
+import {Chip, Image} from '@nextui-org/react';
+import {Search, ShoppingBag, Star} from 'react-feather';
+import {Button} from '@nextui-org/button';
+import {Link} from '@nextui-org/link';
+import {Skeleton} from '@nextui-org/skeleton';
 
 export interface PlaceCardProps {
   id: number;
   title: string,
   image: string,
   rating: number,
-  loading: boolean
+  loading?: boolean
 }
 
 export default function AttractionCard({id, title, image, rating, loading}: PlaceCardProps) {
 
-  const ratingColor: () => "primary" | "default" | "secondary" | "success" | "warning" | "danger" | undefined = () => {
+  const ratingColor: () => 'primary' | 'default' | 'secondary' | 'success' | 'warning' | 'danger' | undefined = () => {
     if (rating >= 4)
-      return "success"
+      return 'success';
 
     if (rating >= 2)
-      return "warning"
+      return 'warning';
 
-    return "danger"
-  }
+    return 'danger';
+  };
 
   return (
     <Card className="h-auto bg-clip-content gap-3">
@@ -79,5 +79,5 @@ export default function AttractionCard({id, title, image, rating, loading}: Plac
         </Skeleton>
       </CardFooter>
     </Card>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import {z} from "zod";
+import {z} from 'zod';
 
 
 export const defaultPageSize = 10;
@@ -10,7 +10,7 @@ export const paginatorSchema = z.object({
 }).default({
   pageSize: defaultPageSize,
   page: defaultPage
-})
+});
 
 export async function paginateQueryData<T>(
   paginator: z.infer<typeof paginatorSchema>,
@@ -19,5 +19,5 @@ export async function paginateQueryData<T>(
   return {
     data: await query(paginator.pageSize, paginator.page),
     pagination: paginator
-  }
+  };
 }

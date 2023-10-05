@@ -1,14 +1,14 @@
 'use client';
 
-import {NavbarContent, Navbar, NavbarItem} from "@nextui-org/navbar";
-import React, {useEffect, useState} from "react";
-import {signIn, signOut, useSession} from "next-auth/react";
-import {Button} from "@nextui-org/button";
-import {Avatar} from "@nextui-org/avatar";
-import {Dropdown, DropdownItem, DropdownMenu, DropdownTrigger} from "@nextui-org/dropdown";
-import {Link} from "@nextui-org/link";
-import {Moon, Sun} from "react-feather";
-import {themesRootClasses} from "@/app/constants";
+import {NavbarContent, Navbar, NavbarItem} from '@nextui-org/navbar';
+import React, {useEffect, useState} from 'react';
+import {signIn, signOut, useSession} from 'next-auth/react';
+import {Button} from '@nextui-org/button';
+import {Avatar} from '@nextui-org/avatar';
+import {Dropdown, DropdownItem, DropdownMenu, DropdownTrigger} from '@nextui-org/dropdown';
+import {Link} from '@nextui-org/link';
+import {Moon, Sun} from 'react-feather';
+import {themesRootClasses} from '@/app/constants';
 import NextLink from 'next/link';
 
 export default function AppNavbar() {
@@ -68,5 +68,5 @@ export default function AppNavbar() {
         }
       </NavbarContent>
     </Navbar>
-  )
+  );
 }

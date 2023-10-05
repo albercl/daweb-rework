@@ -1,22 +1,23 @@
 'use client';
 
-import "./globals.css";
-import SearchBar from "@/app/components/search/search-bar";
-import {Card, CardBody} from "@nextui-org/card";
-import {Image} from "@nextui-org/react";
-import React from "react";
+import './globals.css';
+
+import SearchBar from '@/app/components/search/search-bar';
+import {Card, CardBody} from '@nextui-org/card';
+import {Image} from '@nextui-org/react';
+import React from 'react';
 
 export default function Home() {
   return (
-      <>
-        <h1 className="text-3xl text-center my-5">Accesibility Reviews</h1>
-        <SearchBar/>
-        <DestinationCardContainer>
-          <DestinationCard title="Lorca" description="Lorca es un municipio lleno de contrastes. El centro de la ciudad fue declarado Conjunto Histórico Artístico en 1964 y su Castillo, declarado Monumento Nacional en 1931. Pasea por la Lorca de murallas medievales, de iglesias renacentistas, de palacios barrocos y de teatros decimonónicos."/>
-          <DestinationCard title="Lorca" description="Lorca es un municipio lleno de contrastes. El centro de la ciudad fue declarado Conjunto Histórico Artístico en 1964 y su Castillo, declarado Monumento Nacional en 1931. Pasea por la Lorca de murallas medievales, de iglesias renacentistas, de palacios barrocos y de teatros decimonónicos."/>
-          <DestinationCard title="Lorca" description="Lorca es un municipio lleno de contrastes. El centro de la ciudad fue declarado Conjunto Histórico Artístico en 1964 y su Castillo, declarado Monumento Nacional en 1931. Pasea por la Lorca de murallas medievales, de iglesias renacentistas, de palacios barrocos y de teatros decimonónicos."/>
-        </DestinationCardContainer>
-      </>
+    <>
+      <h1 className="text-3xl text-center my-5">Accesibility Reviews</h1>
+      <SearchBar/>
+      <DestinationCardContainer>
+        <DestinationCard title="Lorca" description="Lorca es un municipio lleno de contrastes. El centro de la ciudad fue declarado Conjunto Histórico Artístico en 1964 y su Castillo, declarado Monumento Nacional en 1931. Pasea por la Lorca de murallas medievales, de iglesias renacentistas, de palacios barrocos y de teatros decimonónicos."/>
+        <DestinationCard title="Lorca" description="Lorca es un municipio lleno de contrastes. El centro de la ciudad fue declarado Conjunto Histórico Artístico en 1964 y su Castillo, declarado Monumento Nacional en 1931. Pasea por la Lorca de murallas medievales, de iglesias renacentistas, de palacios barrocos y de teatros decimonónicos."/>
+        <DestinationCard title="Lorca" description="Lorca es un municipio lleno de contrastes. El centro de la ciudad fue declarado Conjunto Histórico Artístico en 1964 y su Castillo, declarado Monumento Nacional en 1931. Pasea por la Lorca de murallas medievales, de iglesias renacentistas, de palacios barrocos y de teatros decimonónicos."/>
+      </DestinationCardContainer>
+    </>
   );
 }
 
@@ -39,7 +40,7 @@ function DestinationCard({title, description}: DestinationCardProps) {
         <p>{description}</p>
       </CardBody>
     </Card>
-  )
+  );
 }
 
 function DestinationCardContainer({children}: {children: React.ReactNode}) {
@@ -47,5 +48,5 @@ function DestinationCardContainer({children}: {children: React.ReactNode}) {
     <div className="flex gap-5 py-5 flex-col sm:flex-row">
       {children}
     </div>
-  )
+  );
 }

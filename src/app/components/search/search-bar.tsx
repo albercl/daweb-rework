@@ -1,6 +1,6 @@
-import {Input} from "@nextui-org/react";
-import {Button} from "@nextui-org/button";
-import {Search} from "react-feather";
+import {Input} from '@nextui-org/react';
+import {Button} from '@nextui-org/button';
+import {Search} from 'react-feather';
 
 export default function SearchBar() {
   return (
